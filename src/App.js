@@ -6,7 +6,7 @@ const SOURCE_URL = "https://raw.githubusercontent.com/thoughtbot/guides/master/b
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = { text: "" }
+    this.state = { text: "", loading: true, }
     this.rawMarkup = this.rawMarkup.bind(this)
   }
 
@@ -21,15 +21,20 @@ class App extends Component {
         return response.text()
       })
       .then(text => {
-        this.setState({ text: text })
+        this.setState({ text: text, loading: false, })
       })
   }
 
   render() {
+    let content;
+    if (this.state.loading) {
+      content = <span> Loading content... </span>
+    } else {
+      content = <span dangerouslySetInnerHTML={this.rawMarkup()} />
+    }
+
     return (
-      <div className="App">
-        <span dangerouslySetInnerHTML={this.rawMarkup()} />
-      </div>
+      <div className="App"> {content} </div>
     );
   }
 }
