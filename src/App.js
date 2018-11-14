@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import marked from 'marked';
-import './App.css';
 
 const SOURCE_URL = "https://raw.githubusercontent.com/thoughtbot/guides/master/best-practices/README.md"
 
