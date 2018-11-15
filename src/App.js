@@ -27,6 +27,7 @@ class App extends Component {
 
   render() {
     let content;
+
     if (this.state.loading) {
       content = <span> Loading content... </span>
     } else {
@@ -34,7 +35,19 @@ class App extends Component {
     }
 
     return (
-      <div className="App"> {content} </div>
+      <div className="container mx-auto"> 
+        <div className="py-4">
+          <a href="#" className="mr-2 bg-transparent hover:bg-blue-dark text-blue-dark font-semibold hover:text-white py-2 px-4 rounded border border-blue hover:border-transparent no-underline"> 
+            Best Practices 
+          </a>
+
+          <a href="#" className="ml-2 bg-transparent hover:bg-blue-dark text-blue-dark font-semibold hover:text-white py-2 px-4 rounded border border-blue hover:border-transparent no-underline"> 
+            Code Review
+          </a>
+        </div>
+
+        {content} 
+      </div>
     );
   }
 }
