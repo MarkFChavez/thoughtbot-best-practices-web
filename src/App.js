@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import marked from 'marked';
 
 const THOUGHTBOT_URL = "https://thoughtbot.com"
+const DEVELOPER_URL = "https://markonsoftware.com"
 const BEST_PRACTICES = "https://raw.githubusercontent.com/thoughtbot/guides/master/best-practices/README.md"
 const CODE_REVIEW = "https://raw.githubusercontent.com/thoughtbot/guides/master/code-review/README.md"
 
@@ -67,8 +68,13 @@ class App extends Component {
     return (
       <div className="container mx-auto"> 
         <div className="text-xl py-2">
-          <span> Guides maintained by </span>
-          <a href={THOUGHTBOT_URL} className="text-blue-dark no-underline hover:underline"> thoughtbot, inc. </a>
+          <div>
+            <span> Guides maintained by </span>
+            <a href={THOUGHTBOT_URL} className="text-blue-dark no-underline hover:underline">thoughtbot, inc.</a>,
+
+            <span> check out my </span>
+            <a href={DEVELOPER_URL} className="text-blue-dark no-underline hover:underline">blog</a>.
+          </div>
         </div>
 
         <div className="py-4 border-bottom border-black border-solid border-b-4">
