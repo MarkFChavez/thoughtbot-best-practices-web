@@ -81,7 +81,7 @@ class App extends Component {
           </a>
         </div>
 
-        {content} 
+        <div className="mt-4"> {content} </div>
       </div>
     );
   }
