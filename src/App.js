@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import marked from 'marked';
 
+const THOUGHTBOT_URL = "https://thoughtbot.com"
 const BEST_PRACTICES = "https://raw.githubusercontent.com/thoughtbot/guides/master/best-practices/README.md"
 const CODE_REVIEW = "https://raw.githubusercontent.com/thoughtbot/guides/master/code-review/README.md"
 
@@ -65,6 +66,11 @@ class App extends Component {
 
     return (
       <div className="container mx-auto"> 
+        <div className="text-xl py-2">
+          <span> Guides maintained by </span>
+          <a href={THOUGHTBOT_URL} className="text-blue-dark no-underline hover:underline"> thoughtbot, inc. </a>
+        </div>
+
         <div className="py-4 border-bottom border-black border-solid border-b-4">
           <a href="#" onClick={this.setContent.bind(this, 'best_practices')} className={this.linkClasses('best_practices')}> 
             Best Practices 
