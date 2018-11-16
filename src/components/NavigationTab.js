@@ -10,6 +10,10 @@ const NavigationTab = (props) => {
       <a href="#" onClick={props.onSetContent.bind(this, 'code_review')} className={props.linkClasses('code_review')}> 
         Code Review Tips
       </a>
+
+      <a href="#" onClick={props.onSetContent.bind(this, 'pair_programming')} className={props.linkClasses('pair_programming')}> 
+        Pair Programming Tips
+      </a>
     </div>
   )
 }

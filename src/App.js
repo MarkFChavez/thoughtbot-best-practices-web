@@ -5,6 +5,7 @@ import marked from 'marked';
 
 const BEST_PRACTICES = "https://raw.githubusercontent.com/thoughtbot/guides/master/best-practices/README.md"
 const CODE_REVIEW = "https://raw.githubusercontent.com/thoughtbot/guides/master/code-review/README.md"
+const PAIR_PROGRAMMING = "https://raw.githubusercontent.com/thoughtbot/guides/master/working-together/README.md"
 
 class App extends Component {
   constructor(props) {
@@ -81,8 +82,10 @@ class App extends Component {
   _getUrlFromActiveLink(active) {
     if (active === "best_practices") {
       return BEST_PRACTICES
-    } else {
+    } else if (active === "code_review") {
       return CODE_REVIEW
+    } else {
+      return PAIR_PROGRAMMING
     }
   }
 }
