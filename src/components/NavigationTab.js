@@ -4,15 +4,15 @@ const NavigationTab = (props) => {
   return (
     <div className="py-4 border-bottom border-black border-solid border-b-4">
       <a href="#" onClick={props.onSetContent.bind(this, 'best_practices')} className={props.linkClasses('best_practices')}> 
-        Best Practices 
+        Coding 
       </a>
 
       <a href="#" onClick={props.onSetContent.bind(this, 'code_review')} className={props.linkClasses('code_review')}> 
-        Code Review Tips
+        Reviewing
       </a>
 
       <a href="#" onClick={props.onSetContent.bind(this, 'pair_programming')} className={props.linkClasses('pair_programming')}> 
-        Pair Programming Tips
+        Pairing
       </a>
     </div>
   )
